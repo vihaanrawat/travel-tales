@@ -11,5 +11,7 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 app.get("/api/health", (req,res)=> {
-    res.json()
+    res.json({status:"ok"})
 })
+
+export default app;
