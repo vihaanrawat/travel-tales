@@ -9,3 +9,7 @@ app.use(helmet());
 app.use(cors({origin:process.env.CLIENT_URL}));
 app.use(express.json());
 app.use(morgan("dev"));
+
+app.get("/api/health", (req,res)=> {
+    res.json()
+})
