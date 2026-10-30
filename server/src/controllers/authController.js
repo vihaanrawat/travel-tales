@@ -19,7 +19,10 @@ export async function register(req, res) {
             name:user.name,
             email:user.email
         })
-    } catch (error) {
+    } catch (err) {
+        if(err.code==11000){
+            
+        }
 
     }
 }
