@@ -12,6 +12,7 @@ export async function register(req, res) {
             return res.status(400).json({ message: "Password must be atleast 8 characters" })
         }
         const passwordHash = await bcrypt.hash(password, 12)
+        const user = await User.create({name,email,passwordHash});
     } catch (error) {
 
     }
