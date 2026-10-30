@@ -21,8 +21,9 @@ export async function register(req, res) {
         })
     } catch (err) {
         if(err.code==11000){
-            
+            return res.status(409).json({message:"Email is already registered"})
         }
+        
 
     }
 }
