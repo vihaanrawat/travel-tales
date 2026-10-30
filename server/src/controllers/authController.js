@@ -26,7 +26,8 @@ export async function register(req, res) {
         if(err.name === "ValidationError"){
             return res.status(400).json({message:err.message});
         }
-        
+        console.error(err);
+        res.status(500).json({message : "Server error"})
 
     }
 }
