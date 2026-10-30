@@ -20,10 +20,12 @@ export async function register(req, res) {
             email:user.email
         })
     } catch (err) {
-        if(err.code==11000){
+        if(err.code===11000){
             return res.status(409).json({message:"Email is already registered"})
         }
-        
+        if(err.name === "ValidationError"){
+            return res.status(400)
+        }
 
     }
 }
