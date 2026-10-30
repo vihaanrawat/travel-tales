@@ -24,8 +24,9 @@ export async function register(req, res) {
             return res.status(409).json({message:"Email is already registered"})
         }
         if(err.name === "ValidationError"){
-            return res.status(400)
+            return res.status(400).json({message:err.message});
         }
+        
 
     }
 }
