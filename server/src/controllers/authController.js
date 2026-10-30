@@ -13,6 +13,12 @@ export async function register(req, res) {
         }
         const passwordHash = await bcrypt.hash(password, 12)
         const user = await User.create({name,email,passwordHash});
+
+        res.status(201).json({
+            id:user._id,
+            name:user.name,
+            email:user.email
+        })
     } catch (error) {
 
     }
