@@ -7,3 +7,7 @@ export const cookieOptions = {
     sameSite : isProd ? "none": "lax",
     maxAge : 7*24*60*60*1000, //7 days in ms
 }
+
+export function signToken(userId){
+    return jwt.sign({id})
+}
