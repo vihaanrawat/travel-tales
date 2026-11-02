@@ -1,5 +1,6 @@
 import bcrypt from "bcryptjs"
 import User from "../models/User.js"
+import {signToken,cookieOptions} from "../utils/token.js"
 
 export async function register(req, res) {
     try {
@@ -29,3 +30,4 @@ export async function register(req, res) {
         res.status(500).json({message : "Server error"})
     }
 }
+
