@@ -9,5 +9,14 @@ export const cookieOptions = {
 }
 
 export function signToken(userId){
-    return jwt.sign({id})
+    return jwt.sign(
+        {
+            id: userId,
+        },
+        process.env.JWT_SECRET,
+        {
+            expiresIn: "7d"
+        }
+
+    );
 }
