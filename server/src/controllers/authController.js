@@ -40,7 +40,9 @@ export async function login(req, res) {
         const user = await User.findOne({
             email: email.toLowerCase().trim(),
         }).select("+passwordHash");
+
         
+
     } catch (error) {
 
     }
