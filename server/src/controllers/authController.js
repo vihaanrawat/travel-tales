@@ -69,3 +69,5 @@ export function logout(req,res){
     res.clearCookie("token",clearOptions)
     res.json({message:"Logged out"})
 }
+
+
