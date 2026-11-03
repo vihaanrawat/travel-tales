@@ -8,8 +8,13 @@ import morgan from "morgan"
 const app = express();
 
 app.use(helmet());
-app.use(cors({origin:process.env.CLIENT_URL}));
+
+app.use(cors({origin:process.env.CLIENT_URL, credentials:true}));
+
 app.use(express.json());
+
+app.use(cookieParser());
+
 app.use(morgan("dev"));
 
 app.get("/api/health", (req,res)=> {
@@ -18,8 +23,7 @@ app.get("/api/health", (req,res)=> {
 
 app.use("/api/auth",authRoutes);
 
-app.use(cors({origin:process.env.CLIENT_URL, credentials:true}))
-app.use(express.json());
-app.use(cookieParser());
+
+
 
 export default app;
