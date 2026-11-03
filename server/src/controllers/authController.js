@@ -49,7 +49,7 @@ export async function login(req, res) {
             });
         }
 
-        
+        res.cookie("token",signToken(user._id),cookieOptions);
 
     } catch (error) {
 
