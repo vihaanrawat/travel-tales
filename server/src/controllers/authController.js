@@ -71,5 +71,6 @@ export function logout(req,res){
 }
 
 export function me(req,res){
-    
+    const {_id,name,email}= req.user
+    res.json({id:_id,name ,email});
 }
