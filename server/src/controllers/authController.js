@@ -57,7 +57,11 @@ export async function login(req, res) {
             email:user.email
         })
 
-    } catch (error) {
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({message:"Server Error"});
 
     }
 }
+
+
