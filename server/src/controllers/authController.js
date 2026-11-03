@@ -37,7 +37,7 @@ export async function login(req,res) {
         if(typeof email !== "string" || typeof password !== "string"){
             return res.status(400).json({message : "Email and password are required"});
         }
-        
+        const user = await User.findOne({email:email.toLowerCase().trim()})
     } catch (error) {
         
     }
