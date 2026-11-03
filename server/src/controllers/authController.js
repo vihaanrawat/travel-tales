@@ -34,6 +34,9 @@ export async function register(req, res) {
 export async function login(req,res) {
     try {
         const {email,password} = req.body;
+        if(typeof email !== "string" || typeof password !== "string"){
+            return res.status(400)
+        }
     } catch (error) {
         
     }
