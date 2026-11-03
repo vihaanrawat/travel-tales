@@ -70,4 +70,6 @@ export function logout(req,res){
     res.json({message:"Logged out"})
 }
 
-
+export function me(req,res){
+    
+}
