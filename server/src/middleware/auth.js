@@ -15,6 +15,7 @@ export async function protect(req,res,next) {
             return res.status(401).json({message:"User no longer exists"})
         }
         req.user = user;
+        next();
 
     } catch (err) {
         
