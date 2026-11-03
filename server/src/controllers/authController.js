@@ -51,6 +51,12 @@ export async function login(req, res) {
 
         res.cookie("token",signToken(user._id),cookieOptions);
 
+        res.json({
+            id: user._id,
+            name:user.name,
+            email:user.email
+        })
+
     } catch (error) {
 
     }
