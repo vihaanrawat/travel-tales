@@ -41,7 +41,7 @@ export async function login(req, res) {
             email: email.toLowerCase().trim(),
         }).select("+passwordHash");
 
-        
+        const valid = user && (await bcrypt.compare(password, user.passwordHash))
 
     } catch (error) {
 
