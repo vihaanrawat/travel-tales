@@ -33,8 +33,10 @@ const storySchema = new mongoose.Schema(
         travelStartDate:{type:Date},
         travelEndDate:{
             type:Date,
-            vaidator: function (value){
-                return !value || !this.travelStartDate || value>= this.travelEndDate
+            validate:{
+                validator:function (value){
+                    return !value || !this.travelStartDate || value >= this.travelStartDate;
+                }
             }
         }
 
