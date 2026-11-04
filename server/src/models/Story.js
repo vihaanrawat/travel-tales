@@ -38,8 +38,23 @@ const storySchema = new mongoose.Schema(
                     return !value || !this.travelStartDate || value >= this.travelStartDate;
                 },
                 message:"End date cannot be before start date"
-            }
+            },
+        },
+        tags:{
+            type:[{
+                
+                type:String,
+                trim:true,
+                lowercase:true
+            }],
+            default:[]
+        },
+        status:{
+            type:String,
+            enum:["draft","published"],
+            default:"published"
         }
+
 
     }
 )
