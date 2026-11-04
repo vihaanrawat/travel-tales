@@ -21,7 +21,15 @@ const storySchema = new mongoose.Schema(
         },
         country:{
             type:String,
-            
-        }
+            trim:true,
+            maxlength:100,
+            default:"",
+        },
+        content:{
+            type:String,
+            required:[true,"Story content is required"],
+            maxlength:[20000,"Story is too long"],
+        },
+        
     }
 )
