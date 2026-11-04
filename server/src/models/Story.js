@@ -53,8 +53,10 @@ const storySchema = new mongoose.Schema(
             type:String,
             enum:["draft","published"],
             default:"published"
-        }
+        },
 
-
-    }
+    },
+    {timestamps:true}
 )
+
+export default mongoose.model("Story",storySchema)
