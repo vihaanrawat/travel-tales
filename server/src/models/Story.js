@@ -30,7 +30,11 @@ const storySchema = new mongoose.Schema(
             required:[true,"Story content is required"],
             maxlength:[20000,"Story is too long"],
         },
-        travelStartDate:{type:Data},
-        
+        travelStartDate:{type:Date},
+        travelEndDate:{
+            type:Date,
+            
+        }
+
     }
 )
