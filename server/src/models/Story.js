@@ -36,7 +36,8 @@ const storySchema = new mongoose.Schema(
             validate:{
                 validator:function (value){
                     return !value || !this.travelStartDate || value >= this.travelStartDate;
-                }
+                },
+                message:"End date cannot be before start date"
             }
         }
 
