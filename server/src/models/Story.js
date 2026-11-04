@@ -11,11 +11,13 @@ const storySchema = new mongoose.Schema(
             type:String,
             required:[true,"Title is required"],
             trim: true,
-            maxlength: [true, "Title must be 120 characters or fewer"],
+            maxlength: [120, "Title must be 120 characters or fewer"],
         },
         destination:{
             type:String,
-            required:[true,"Destination is required"]
+            required:[true,"Destination is required"],
+            trim : true,
+            maxlength:[]
         }
     }
 )
