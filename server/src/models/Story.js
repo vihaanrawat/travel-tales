@@ -17,7 +17,11 @@ const storySchema = new mongoose.Schema(
             type:String,
             required:[true,"Destination is required"],
             trim : true,
-            maxlength:[]
+            maxlength:[100,"Destination must be 100 characters or fewer"],
+        },
+        country:{
+            type:String,
+            
         }
     }
 )
