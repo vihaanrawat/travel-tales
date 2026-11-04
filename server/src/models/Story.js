@@ -33,7 +33,9 @@ const storySchema = new mongoose.Schema(
         travelStartDate:{type:Date},
         travelEndDate:{
             type:Date,
-            
+            vaidator: function (value){
+                return !value || !this.travelStartDate || value
+            }
         }
 
     }
