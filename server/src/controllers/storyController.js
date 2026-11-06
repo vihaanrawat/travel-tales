@@ -23,7 +23,8 @@ export async function createStory(req, res) {
             content,
             travelStartDate,
             travelEndDate,
-            
+            tags: Array.isArray(tags) ? tags : [],
+            status
         })
     } catch (err) {
 
