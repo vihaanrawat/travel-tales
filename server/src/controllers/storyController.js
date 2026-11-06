@@ -46,7 +46,11 @@ export async function getStories(req,res) {
 
 export async function getStoryById(req,res) {
     try {
-        
+        const {id} = req.params
+        if(!mongoose.isValidObjectId(id)){
+            return res.status(404).json({message:"Story not found"})
+        }
+        const story = await Story.findOne({_id:id, status:"published"})
     } catch (err) {
         
     }    
