@@ -50,7 +50,7 @@ export async function getStoryById(req,res) {
         if(!mongoose.isValidObjectId(id)){
             return res.status(404).json({message:"Story not found"})
         }
-        const story = await Story.findOne({_id:id, status:"published"})
+        const story = await Story.findOne({_id:id, status:"published"}).populate("author",AUTHOR_FIELDS)
     } catch (err) {
         
     }    
