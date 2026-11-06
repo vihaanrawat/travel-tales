@@ -7,3 +7,5 @@ const router = Router();
 router.get("/",getStories)
 router.get("/:id",getStoryById)
 router.post("/",createStory)
+
+export default router
