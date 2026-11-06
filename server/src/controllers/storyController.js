@@ -35,7 +35,7 @@ export async function createStory(req, res) {
 
 export async function getStories(req,res) {
     try {
-        
+        const stories = await Story.find({status:"published"})
     } catch (error) {
         
     }
