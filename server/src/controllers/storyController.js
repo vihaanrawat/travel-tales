@@ -14,7 +14,17 @@ function handleError(err, res) {
 export async function createStory(req, res) {
     try {
         const { title, destination, country, content, travelStartDate, travelEndDate, tags, status } = req.body;
-        
+
+        const story = await Story.create({
+            author:req.user._id,
+            title,
+            destination,
+            country,
+            content,
+            travelStartDate,
+            travelEndDate,
+            
+        })
     } catch (err) {
 
     }
