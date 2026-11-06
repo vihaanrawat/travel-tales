@@ -32,3 +32,12 @@ export async function createStory(req, res) {
     }
 
 }
+
+export async function getStories(req,res) {
+    try {
+        
+    } catch (error) {
+        
+    }
+    
+}
