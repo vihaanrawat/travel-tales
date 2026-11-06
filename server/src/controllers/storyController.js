@@ -57,6 +57,6 @@ export async function getStoryById(req,res) {
         }
         res.json(story)
     } catch (err) {
-        
+        handleError(err,res)
     }    
 }
