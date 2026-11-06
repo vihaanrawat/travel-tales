@@ -1,5 +1,6 @@
 import cookieParser from "cookie-parser"
 import authRoutes from "./routes/authRoutes.js"
+import storyRoutes from "../src"
 import express from "express"
 import cors from "cors"
 import helmet from "helmet"
