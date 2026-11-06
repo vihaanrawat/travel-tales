@@ -23,5 +23,6 @@ app.get("/api/health", (req,res)=> {
 })
 
 app.use("/api/auth",authRoutes);
+app.use("/api/stories",storyRoutes)
 
 export default app;
