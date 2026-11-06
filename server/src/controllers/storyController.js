@@ -38,8 +38,16 @@ export async function getStories(req,res) {
         const stories = await Story.find({status:"published"}).sort({createdAt:-1}).limit(20).populate("author",AUTHOR_FIELDS)
 
         res.json(stories)
-    } catch (error) {
+    } catch (err) {
+        handleError(err,res)
         
     }
-    
+}
+
+export async function getStoryById(req,res) {
+    try {
+        
+    } catch (err) {
+        
+    }    
 }
