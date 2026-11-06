@@ -24,10 +24,11 @@ export async function createStory(req, res) {
             travelStartDate,
             travelEndDate,
             tags: Array.isArray(tags) ? tags : [],
-            status
+            status,
         })
+        res.status(201).json(story)
     } catch (err) {
-
+        handleError(err,res)
     }
 
 }
