@@ -62,5 +62,8 @@ export async function getStoryById(req,res) {
 }
 
 const UPDATABLE = [
-    
+    "title", "destination", "country", "content",
+    "travelStartDate" , "travelEndDate", "tags", "status",
 ]
+
+
