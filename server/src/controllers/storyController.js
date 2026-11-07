@@ -85,6 +85,7 @@ async function findOwnedStory(req,res) {
         res.status(403).json({message:"You can only modify your own stories"});
         return null;
     }
+    return story;
 }
 
 
