@@ -82,7 +82,8 @@ async function findOwnedStory(req,res) {
     }
     
     if(!story.author.equals(req.user._id)){
-    
+        res.status(403).json({message:"You can only modify your own stories"});
+        return null;
     }
 }
 
