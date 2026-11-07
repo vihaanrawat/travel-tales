@@ -60,3 +60,7 @@ export async function getStoryById(req,res) {
         handleError(err,res)
     }    
 }
+
+const UPDATABLE = [
+    
+]
