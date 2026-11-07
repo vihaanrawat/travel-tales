@@ -71,4 +71,8 @@ const UPDATABLE = [
 
 async function findOwnedStory(req,res) {
     const {id} = req.params
+    res.status(404).json({message:"Story not found"});
+    return null;
 }
+
+
