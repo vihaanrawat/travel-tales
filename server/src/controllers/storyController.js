@@ -71,14 +71,20 @@ const UPDATABLE = [
 
 async function findOwnedStory(req,res) {
     const {id} = req.params
-    res.status(404).json({message:"Story not found"});
-    return null;
+    if(!mongoose.isValidObjectId(id)){
+        res.status(404).json({message:"Story not found"});
+        return null;
+    }
+    const story = await Story.findById(id)
+    if(!story){
+        res.status(404).json({message:"Story not found"});
+        return null;
+    }
+    
+    if(!story.author.equals(req.user._id)){
+    
+    }
 }
 
-const story = await Story.findById(id)
-if(!story){
-    res.status(404).json({message:"Story not found"});
-    return null;
-}
 
 
