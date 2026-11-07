@@ -69,6 +69,6 @@ const UPDATABLE = [
 //returns the story if it exists and belongs to the logged in user
 //otherwise send the error response itself and return null
 
-async function findOwnedStory(params) {
-    
+async function findOwnedStory(req,res) {
+    const {id} = req.params
 }
