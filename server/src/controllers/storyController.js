@@ -67,4 +67,6 @@ const UPDATABLE = [
 ]
 
 //returns the story if it exists and belongs to the logged in user
-//otherwise send the error response itself
+//otherwise send the error response itself and return null
+
+
