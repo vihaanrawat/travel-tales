@@ -75,4 +75,10 @@ async function findOwnedStory(req,res) {
     return null;
 }
 
+const story = await Story.findById(id)
+if(!story){
+    res.status(404).json({message:"Story not found"});
+    return null;
+}
+
 
