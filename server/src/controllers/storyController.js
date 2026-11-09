@@ -109,10 +109,13 @@ export async function updateStory(req,res) {
 
 export async function deleteStory(req,res) {
     try {
-        const story = await findOwnedStory
+        const story = await findOwnedStory(req,res)
+        if(!story) return;
+
+        await story.deleteOne()
+        res.json({message:"Story deleted"})
     } catch (err) {
         handleError(err,res)
-        
     }
 }
 
