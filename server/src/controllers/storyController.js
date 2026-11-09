@@ -94,7 +94,7 @@ export async function updateStory(req,res) {
         if(!story) return;
 
         for(const key of UPDATABLE){
-            
+            if(req.body[key]!==undefined) story[key] = req.body[key];
         }
     } catch (error) {
         
