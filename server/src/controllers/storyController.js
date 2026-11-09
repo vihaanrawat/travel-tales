@@ -33,15 +33,13 @@ export async function createStory(req, res) {
 
 }
 
-export async function getStories(req,res) {
-    try {
-        const stories = await Story.find({status:"published"}).sort({createdAt:-1}).limit(20).populate("author",AUTHOR_FIELDS)
+const SORTS = {
+    newest: {createdAt:-1, _id: -1},
+    oldest: {createdAt:1, _id:1},
+}
 
-        res.json(stories)
-    } catch (err) {
-        handleError(err,res)
-        
-    }
+export async function getStories(req,res) {
+  
 }
 
 export async function getStoryById(req,res) {
