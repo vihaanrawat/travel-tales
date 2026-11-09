@@ -96,6 +96,11 @@ export async function updateStory(req,res) {
         for(const key of UPDATABLE){
             if(req.body[key]!==undefined) story[key] = req.body[key];
         }
+
+        if(story.travelStartDate && story.travelEndDate && story.travelEndDate < story.travelStartDate){
+            return res.status(400).json({message:"End date cannot be before start date"})
+        }
+        await story.save()
     } catch (error) {
         
     }
