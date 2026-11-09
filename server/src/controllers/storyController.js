@@ -42,7 +42,11 @@ const asString = (v) => (typeof v ==="string" ? v.trim() : "")
 const escapeRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")
 
 export async function getStories(req,res) {
-    
+    try {
+        const page = Math.max(parseInt(req.query.page,10))
+    } catch (error) {
+        
+    }
 }
 
 export async function getStoryById(req,res) {
