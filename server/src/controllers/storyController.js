@@ -108,7 +108,12 @@ export async function updateStory(req,res) {
 }
 
 export async function deleteStory(req,res) {
-    
+    try {
+        const story = await findOwnedStory
+    } catch (err) {
+        handleError(err,res)
+        
+    }
 }
 
 
