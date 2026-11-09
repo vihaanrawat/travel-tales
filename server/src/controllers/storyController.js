@@ -93,7 +93,9 @@ export async function updateStory(req,res) {
         const story = await findOwnedStory(req,res)
         if(!story) return;
 
-        
+        for(const key of UPDATABLE){
+            
+        }
     } catch (error) {
         
     }
