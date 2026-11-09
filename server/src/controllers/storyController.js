@@ -90,7 +90,10 @@ async function findOwnedStory(req,res) {
 
 export async function updateStory(req,res) {
     try {
-        const story = await findOwnedStory
+        const story = await findOwnedStory(req,res)
+        if(!story) return;
+
+        
     } catch (error) {
         
     }
