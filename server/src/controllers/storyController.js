@@ -38,6 +38,8 @@ const SORTS = {
     oldest: {createdAt:1, _id:1},
 }
 
+const asString = (v) => (typeof v ==="string" ? v.trim() : "")
+
 export async function getStories(req,res) {
   
 }
