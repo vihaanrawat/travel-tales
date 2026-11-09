@@ -101,9 +101,13 @@ export async function updateStory(req,res) {
             return res.status(400).json({message:"End date cannot be before start date"})
         }
         await story.save()
-    } catch (error) {
-        
+        res.json(story)
+    } catch (err) {
+        handleError(err,res);
     }
+}
+
+export async function deleteStory(req,res) {
     
 }
 
