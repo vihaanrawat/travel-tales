@@ -45,6 +45,9 @@ export async function getStories(req,res) {
     try {
         const page = Math.max(parseInt(req.query.page,10) || 1,1)
         const limit = Math.min(Math.max(parseInt(req.query.limit,10) || 10,1),50)
+        
+        const filter=  {status:"published"}
+        
     } catch (error) {
         
     }
