@@ -88,5 +88,14 @@ async function findOwnedStory(req,res) {
     return story;
 }
 
+export async function updateStory(req,res) {
+    try {
+        const story = await findOwnedStory
+    } catch (error) {
+        
+    }
+    
+}
+
 
 
