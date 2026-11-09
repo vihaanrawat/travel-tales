@@ -39,11 +39,10 @@ const SORTS = {
 }
 
 const asString = (v) => (typeof v ==="string" ? v.trim() : "")
-const escapeRegex = (s) => s.replace
-
+const escapeRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")
 
 export async function getStories(req,res) {
-  
+    
 }
 
 export async function getStoryById(req,res) {
