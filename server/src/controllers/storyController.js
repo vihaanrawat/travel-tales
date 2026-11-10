@@ -48,6 +48,16 @@ export async function getStories(req,res) {
         
         const filter=  {status:"published"}
         
+        const search = asString(req.query.search)
+        if(search){
+            const rx = new RegExp(escapeRegex(search), "i"); //i means case insensitive
+            filter.$or = [
+                {title:rx},
+                {destination:rx}
+            ];
+        }
+
+        
     } catch (error) {
         
     }
