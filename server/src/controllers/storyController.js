@@ -57,6 +57,9 @@ export async function getStories(req,res) {
             ];
         }
         const destination = asString(req.query.destination);
+        if(destination){
+            filter.destination = new RegExp(`${escapeRegex(destination)}$`,"i");
+        }
         
     } catch (error) {
         
