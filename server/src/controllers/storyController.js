@@ -65,6 +65,10 @@ export async function getStories(req,res) {
 
         const sortKey = asString(req.query.sort);
         const sort = Object.hasOwn(SORTS,sortKey) ? SORTS[sortKey] : SORTS.newest;
+
+        const [stories, total] = await Promise.all([
+            
+        ])
     } catch (error) {
         
     }
@@ -140,7 +144,7 @@ export async function deleteStory(req,res) {
 
         await story.deleteOne()
         res.json({message:"Story deleted"})
-        
+
     } catch (err) {
         handleError(err,res)
     }
