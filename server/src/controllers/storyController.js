@@ -67,8 +67,11 @@ export async function getStories(req,res) {
         const sort = Object.hasOwn(SORTS,sortKey) ? SORTS[sortKey] : SORTS.newest;
 
         const [stories, total] = await Promise.all([
-            Story.find(filter).sort(sort).skip((page-1)*limit).limit(limit).populate("author",AUTHOR_FIELDS)
+            Story.find(filter).sort(sort).skip((page-1)*limit).limit(limit).populate("author",AUTHOR_FIELDS),
+            Story.countDocuments(filter),
         ])
+
+        res.json({stories,page,limit,total,totalPages: Math.ceil(total/limit)})
     } catch (error) {
         
     }
