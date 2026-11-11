@@ -64,7 +64,7 @@ export async function getStories(req,res) {
         if(tag) filter.tags = tag;
 
         const sortKey = asString(req.query.sort);
-        const sort = Object.hasOwn(SORTS,sortKey)
+        const sort = Object.hasOwn(SORTS,sortKey) ? SORTS[sortKey] : SORTS.newest;
     } catch (error) {
         
     }
