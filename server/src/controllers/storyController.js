@@ -56,7 +56,7 @@ export async function getStories(req,res) {
                 {destination:rx}
             ];
         }
-
+        const destination = asString(req.query.destination);
         
     } catch (error) {
         
