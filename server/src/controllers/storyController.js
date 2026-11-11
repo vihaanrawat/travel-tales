@@ -34,7 +34,7 @@ export async function createStory(req, res) {
 }
 
 const SORTS = {
-    newest: {createdAt:-1, _id: -1},
+    newest: {createdAt:-1, _id: -1},  //1 = ascending order ,-1 = descending order
     oldest: {createdAt:1, _id:1},
 }
 
