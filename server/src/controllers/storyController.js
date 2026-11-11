@@ -73,7 +73,7 @@ export async function getStories(req,res) {
 
         res.json({stories,page,limit,total,totalPages: Math.ceil(total/limit)})
     } catch (error) {
-        
+        handleError(err,res);   
     }
 }
 
