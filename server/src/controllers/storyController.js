@@ -140,6 +140,7 @@ export async function deleteStory(req,res) {
 
         await story.deleteOne()
         res.json({message:"Story deleted"})
+        
     } catch (err) {
         handleError(err,res)
     }
