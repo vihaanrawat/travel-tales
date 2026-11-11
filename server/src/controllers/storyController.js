@@ -67,7 +67,7 @@ export async function getStories(req,res) {
         const sort = Object.hasOwn(SORTS,sortKey) ? SORTS[sortKey] : SORTS.newest;
 
         const [stories, total] = await Promise.all([
-            Story.find(filter).sort(sort)
+            Story.find(filter).sort(sort).skip((page-1))
         ])
     } catch (error) {
         
