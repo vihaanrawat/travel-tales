@@ -60,7 +60,8 @@ export async function getStories(req,res) {
         if(destination){
             filter.destination = new RegExp(`${escapeRegex(destination)}$`,"i");
         }
-        
+        const tag = asString(req.query.tag).toLowerCase();
+        if(tag) filter.tags = tag
     } catch (error) {
         
     }
