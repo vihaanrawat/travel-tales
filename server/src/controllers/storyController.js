@@ -63,7 +63,8 @@ export async function getStories(req,res) {
         const tag = asString(req.query.tag).toLowerCase();
         if(tag) filter.tags = tag;
 
-        
+        const sortKey = asString(req.query.sort);
+        const sort = Object.hasOwn(SORTS,sortKey)
     } catch (error) {
         
     }
