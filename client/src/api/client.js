@@ -17,6 +17,6 @@ export async function api(path, {method="GET" , body}= {}) {
         if(!err.response){
             throw new Error("Cannot reach server . Please try again")
         }
-        throw new Error
+        throw new Error(err.response.data?.message || `Request failed (${err.response.status})`)
     }
 }
