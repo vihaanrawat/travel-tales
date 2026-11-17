@@ -14,7 +14,9 @@ export async function api(path, {method="GET" , body}= {}) {
         })
         return data
     } catch (err) {
-
-        
+        if(!err.response){
+            throw new Error("Cannot reach server . Please try again")
+        }
+        throw new Error
     }
 }
