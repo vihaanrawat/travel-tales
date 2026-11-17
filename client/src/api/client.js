@@ -5,6 +5,14 @@ export const http = axios.create({
     withCredentials:true,
 })
 
-export async function api(path, {method}) {
-    
+export async function api(path, {method="GET" , body}= {}) {
+    try {
+        const {data} = await http.request({
+            url:path,
+            method,
+            data:body
+        })
+    } catch (error) {
+        
+    }
 }
