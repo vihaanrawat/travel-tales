@@ -12,7 +12,9 @@ export async function api(path, {method="GET" , body}= {}) {
             method,
             data:body
         })
-    } catch (error) {
+        return data
+    } catch (err) {
+
         
     }
 }
