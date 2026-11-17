@@ -6,6 +6,9 @@ export default function Layout(){
         <header>
             <Link to="/">Travel Tales</Link>
         </header>
+        <main>
+            <Outlet/>
+        </main>
         </>
     )
 }
