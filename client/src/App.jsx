@@ -1,1 +1,5 @@
 import {Routes,Route} from "react-router"
+import Layout from "./components/Layout.jsx"
+import Home from "./pages/Home.jsx"
+import StoryDetail from "./pages/StoryDetail.jsx"
+import NotFound from "./"
