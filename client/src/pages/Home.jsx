@@ -7,6 +7,6 @@ export default function Home(){
     const [error,setError] = useState("")
 
     useEffect(()=>{
-
+        let ignore = false;
     }, [])
 }
