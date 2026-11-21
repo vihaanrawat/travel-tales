@@ -24,6 +24,7 @@ export default function Home() {
 
     return (
         <section>
+            <h1>Every trip has a story worth sharing</h1>
             
         </section>
     )
