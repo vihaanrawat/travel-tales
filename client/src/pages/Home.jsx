@@ -20,4 +20,5 @@ export default function Home() {
     }, [])
 
     if(error) return <p>{error}</p>
+    if(!data) return <p>Loading...</p>
 }
