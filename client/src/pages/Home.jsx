@@ -7,6 +7,7 @@ export default function Home(){
     const [error,setError] = useState("")
 
     useEffect(()=>{
-        let ignore = false;
+        let ignore = false; // initially request is allowed to update the state
+        
     }, [])
 }
