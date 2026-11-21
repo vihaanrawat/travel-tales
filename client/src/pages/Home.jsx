@@ -25,7 +25,10 @@ export default function Home() {
     return (
         <section>
             <h1>Every trip has a story worth sharing</h1>
-            
+            {data.stories.length===0 && <p>No stories yet.</p>}
+            <ul>
+                
+            </ul>
         </section>
     )
 }
