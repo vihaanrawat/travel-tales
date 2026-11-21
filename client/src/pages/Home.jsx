@@ -11,7 +11,13 @@ export default function Home() {
         api("/stories?limit=12").then((result) => {
             if (!ignore) setData(result)
         }).catch((err) => {
-    if(!ignore) setError(err.message)
+            if (!ignore) setError(err.message)
         })
+
+        return () => {
+            ignore = true;
+        }
     }, [])
+
+    
 }
