@@ -28,7 +28,9 @@ export default function Home() {
             {data.stories.length===0 && <p>No stories yet.</p>}
             <ul>
                 {data.stories.map((story)=>(
-                    <li></li>
+                    <li key={story._id}>
+                        <Link to></Link>
+                    </li>
                 ))}
             </ul>
         </section>
