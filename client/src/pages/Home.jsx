@@ -8,6 +8,8 @@ export default function Home(){
 
     useEffect(()=>{
         let ignore = false; // initially request is allowed to update the state
-        
+        api("/stories?limit=12").then((result)=>{
+            if(!ignore) setData(result)
+        }).catch()
     }, [])
 }
