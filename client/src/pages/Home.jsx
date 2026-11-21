@@ -29,7 +29,7 @@ export default function Home() {
             <ul>
                 {data.stories.map((story)=>(
                     <li key={story._id}>
-                        <Link to={`/stor`}></Link>
+                        <Link to={`/stories/${story._id}`}>{story.title}</Link>
                     </li>
                 ))}
             </ul>
