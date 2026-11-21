@@ -30,6 +30,7 @@ export default function Home() {
                 {data.stories.map((story)=>(
                     <li key={story._id}>
                         <Link to={`/stories/${story._id}`}>{story.title}</Link>
+                        {" "}— {story.destination}, by {story.author?.name}
                     </li>
                 ))}
             </ul>
