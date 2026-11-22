@@ -21,6 +21,6 @@ export default function StoryDetail(){
             ignore = true
         }
 
-    },[id])
+    },[id]) // the effect runs when the component mounts and id changes
 
 }
