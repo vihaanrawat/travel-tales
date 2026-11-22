@@ -14,7 +14,7 @@ export default function StoryDetail(){
         api(`/stories/${id}`).then((result)=>{
             if(!ignore) setStory(result);
         }).catch((err)=>{
-            if(!ignore) setError(err);
+            if(!ignore) setError(err.message);
         })
 
         return () =>{
