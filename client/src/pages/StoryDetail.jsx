@@ -3,5 +3,6 @@ import {useParams} from "react-router"
 import {api} from "../api/client.js"
 
 export default function StoryDetail(){
+    const {id} = useParams();
     
 }
