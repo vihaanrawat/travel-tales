@@ -26,6 +26,10 @@ export default function StoryDetail(){
     if(error) return <p>{error}</p>
     if(!story) return <p>Loading...</p>
 
-    return 
+    return (
+        <article>
+            
+        </article>
+    )
 
 }
