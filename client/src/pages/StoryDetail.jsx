@@ -23,4 +23,9 @@ export default function StoryDetail(){
 
     },[id]) // the effect runs when the component mounts and id changes
 
+    if(error) return <p>{error}</p>
+    if(!story) return <p>Loading...</p>
+
+    return 
+
 }
