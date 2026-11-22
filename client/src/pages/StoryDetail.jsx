@@ -33,7 +33,7 @@ export default function StoryDetail(){
                 {story.destination}
                 {story.country && `, ${story.country}`} · by {story.author?.name}
             </p>
-            <p style={{}}></p>
+            <p style={{whiteSpace:"pre-wrap"}}>{story.content}</p>
         </article>
     )
 
