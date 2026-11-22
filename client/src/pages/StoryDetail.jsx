@@ -28,7 +28,11 @@ export default function StoryDetail(){
 
     return (
         <article>
-            
+            <h1>{story.title}</h1>
+            <p>
+                {story.destination}
+                
+            </p>
         </article>
     )
 
