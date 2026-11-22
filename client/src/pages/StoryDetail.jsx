@@ -31,7 +31,7 @@ export default function StoryDetail(){
             <h1>{story.title}</h1>
             <p>
                 {story.destination}
-                
+                {story.country && `, ${story.country}`}
             </p>
         </article>
     )
