@@ -13,5 +13,12 @@ export default function Login(){
 
     async function handleSubmit(e) {
         e.preventDefault()
+        setError("")
+        setSubmitting(true)
+        try {
+            await login(email,password)
+        } catch (error) {
+            
+        }
     }
 }
