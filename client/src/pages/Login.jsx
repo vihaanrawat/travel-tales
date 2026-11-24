@@ -12,6 +12,6 @@ export default function Login(){
     if(user) return <Navigate to="/" replace/>
 
     async function handleSubmit(e) {
-        
+        e.preventDefault()
     }
 }
