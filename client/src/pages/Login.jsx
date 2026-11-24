@@ -17,8 +17,10 @@ export default function Login(){
         setSubmitting(true)
         try {
             await login(email,password)
-        } catch (error) {
-            
+        } catch (err) {
+            setError(err.message)
+        }finally{
+            setSubmitting(false)
         }
     }
 }
