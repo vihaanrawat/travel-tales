@@ -32,7 +32,12 @@ export default function AuthProvider({ children }) {
     }
 
     async function register(name,email,password) {
-        await api
+        await api("/auth/register",{
+            method:"POST",
+            body:{name,email,password}
+        })
+
+        await login(email,password)
     }
 
 }    
