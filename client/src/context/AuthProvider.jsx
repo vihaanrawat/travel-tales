@@ -7,7 +7,8 @@ export default function AuthProvider({children}){
     const [loading,setLoading] = useState(true)
 
     useEffect(()=>{
-        let ignore  = false;
+        let ignore  = false; //it prevents an outdated api response from updating state after component gets unmounted
+        
         
         api("/auth/me").then((u))
 
