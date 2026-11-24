@@ -35,7 +35,7 @@ export default function Login() {
                     autoComplete="email"
                     required
                     value={email}
-                    
+                    onChange={(e)=>setEmail}
                 />
             </form>
         </section>
