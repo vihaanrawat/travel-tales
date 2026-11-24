@@ -48,7 +48,7 @@ export default function Login() {
                 />
                 {error && <p role="alert">{error}</p>}
 
-                
+                <button type="submit" disabled={submitting}></button>
             </form>
         </section>
     )
