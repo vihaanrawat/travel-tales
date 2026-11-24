@@ -46,6 +46,8 @@ export default function Login() {
                     value={password}
                     onChange={(e)=>setPassword(e.target.value)}
                 />
+                {error && <p role="alert">{error}</p>}
+
                 
             </form>
         </section>
