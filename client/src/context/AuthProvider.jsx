@@ -30,5 +30,9 @@ export default function AuthProvider({ children }) {
         })
         setUser(u)
     }
-    
+
+    async function register(name,email,password) {
+        await api
+    }
+
 }    
