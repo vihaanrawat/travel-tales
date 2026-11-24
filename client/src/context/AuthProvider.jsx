@@ -44,7 +44,7 @@ export default function AuthProvider({ children }) {
         await api("/auth/logout",{
             method:"POST"
         })
-        
+        setUser(null)
     }
 
 }    
