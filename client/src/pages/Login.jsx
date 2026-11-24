@@ -8,4 +8,6 @@ export default function Login(){
     const [password,setPassword] = useState("")
     const [error,setError] = useState("");
     const [submitting,setSubmitting] = useState(false)
+
+    if(user) return <Navigate to="/" replace/>
 }
