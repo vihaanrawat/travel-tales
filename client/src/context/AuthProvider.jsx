@@ -24,6 +24,11 @@ export default function AuthProvider({ children }) {
     }, [])
 
     async function login(email,password) {
-        
+        const u = await api("/auth/login",{
+            method:"POST",
+            body:{email,password}
+        })
+        setUser(u)
     }
+    
 }    
