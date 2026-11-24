@@ -48,8 +48,13 @@ export default function Login() {
                 />
                 {error && <p role="alert">{error}</p>}
 
-                <button type="submit" disabled={submitting}></button>
+                <button type="submit" disabled={submitting}>
+                    {submitting?"Logging in...":"log in"}
+                </button>
             </form>
+            <p>
+                New here? <Link to="/register">Create an account</Link>
+            </p>
         </section>
     )
 }
