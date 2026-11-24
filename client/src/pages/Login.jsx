@@ -10,4 +10,8 @@ export default function Login(){
     const [submitting,setSubmitting] = useState(false)
 
     if(user) return <Navigate to="/" replace/>
+
+    async function handleSubmit(e) {
+        
+    }
 }
