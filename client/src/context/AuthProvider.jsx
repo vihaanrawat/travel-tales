@@ -22,4 +22,8 @@ export default function AuthProvider({ children }) {
         }
 
     }, [])
+
+    async function login(email,password) {
+        
+    }
 }    
