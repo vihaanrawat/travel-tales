@@ -40,4 +40,11 @@ export default function AuthProvider({ children }) {
         await login(email,password)
     }
 
+    async function logout() {
+        await api("/auth/logout",{
+            method:"POST"
+        })
+        
+    }
+
 }    
