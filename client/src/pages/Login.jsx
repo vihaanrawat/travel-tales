@@ -3,5 +3,7 @@ import { Link,Navigate } from "react-router";
 import { UseAuth } from "../context/useAuth";
 
 export default function Login(){
-    
+    const {user,login} = UseAuth()
+    const [email,setEmail] = useState("")
+    const [password,setPassword] = useState("")
 }
