@@ -33,7 +33,7 @@ export default function Register(){
         <section>
             <h1>Create your account</h1>
             <form onSubmit={handleSubmit}>
-                
+                <label htmlFor="name">Name</label>
             </form>
         </section>
     )
