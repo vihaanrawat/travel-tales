@@ -32,6 +32,9 @@ export default function Register(){
     return(
         <section>
             <h1>Create your account</h1>
+            <form onSubmit={handleSubmit}>
+                
+            </form>
         </section>
     )
 }
