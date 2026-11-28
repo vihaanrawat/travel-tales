@@ -53,13 +53,21 @@ export default function Register() {
                 />
                 <label htmlFor="password">Password</label>
                 <input
-                id="password"
-                type="password"
-                autoComplete="new-password"
-                required
-                value={password}
-                onChange={(e)=>setPassword(e.target.value)}
+                    id="password"
+                    type="password"
+                    autoComplete="new-password"
+                    required
+                    minLength={8}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                 />
+
+                {error && <p role="alert">{error}</p>}
+
+                <button type="submit" disabled={submitting}>
+                    
+                </button>
+
 
             </form>
         </section>
