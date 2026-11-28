@@ -10,5 +10,5 @@ export default function Register(){
     const [error,setError] = useState("")
     const[submitting,setSubmitting] = useState(false)
 
-    if(user) return
+    if(user) return <Navigate to="/" replace/>
 }
