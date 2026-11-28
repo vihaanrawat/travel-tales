@@ -65,11 +65,10 @@ export default function Register() {
                 {error && <p role="alert">{error}</p>}
 
                 <button type="submit" disabled={submitting}>
-                    
+                    {submitting ? "Creating Account...": "Sign up"}
                 </button>
-
-
             </form>
+            
         </section>
     )
 }
