@@ -42,6 +42,15 @@ export default function Register() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
+                <label htmlFor="email"></label>
+                <input
+                    id="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
             </form>
         </section>
     )
