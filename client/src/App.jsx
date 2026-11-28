@@ -10,6 +10,8 @@ export default function App() {
     return (
         <Routes>
             <Route element={<Layout />}>
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/register" element={<Register/>}/>
                 <Route path="/" element={<Home />} />
                 <Route path="/stories/:id" element={<StoryDetail/>}/>
                 <Route path="*" element={<NotFound/>}/>
