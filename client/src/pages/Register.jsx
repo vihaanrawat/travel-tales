@@ -5,6 +5,10 @@ import { UseAuth } from "../context/useAuth";
 export default function Register(){
     const {user,register} = UseAuth()
     const[name,setName] = useState("")
+    const[email,setEmail] = useState("")
+    const[password,setPassword] = useState("")
+    const [error,setError] = useState("")
+    const[submitting,setSubmitting] = useState("")
     
 
 }
