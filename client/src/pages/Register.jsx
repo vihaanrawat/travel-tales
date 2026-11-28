@@ -68,7 +68,9 @@ export default function Register() {
                     {submitting ? "Creating Account...": "Sign up"}
                 </button>
             </form>
-            
+            <p>
+                Already have an account? <Link to="/login">Log in</Link>
+            </p>
         </section>
     )
 }
