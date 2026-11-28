@@ -21,6 +21,13 @@ export default function Register(){
             return
         }
         setSubmitting(true)
-        
+        try {
+            await register(name,email,password)
+        } catch (err) {
+            setError(err.message)
+        }finally{
+            setSubmitting(false)
+        }
     }
+    
 }
