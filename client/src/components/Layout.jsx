@@ -8,7 +8,7 @@ export default function Layout(){
         <header>
             <Link to="/">Travel Tales</Link>
             <nav>
-                {!loading && user}
+                {!loading && (user)}
             </nav>
         </header>
         <main>
