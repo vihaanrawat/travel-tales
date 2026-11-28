@@ -13,6 +13,14 @@ export default function Register(){
     if(user) return <Navigate to="/" replace/>
 
     async function handleSubmit(e) {
-        e.preventDefault()
+        e.preventDefault() // prevents browser default form submission
+        setError("")
+
+        if(password.length<8){
+            setError("Password must be at least 8 characters")
+            return
+        }
+        setSubmitting(true)
+        
     }
 }
